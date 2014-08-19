@@ -1,0 +1,13 @@
+public class DivisorDigits {
+	public int howMany(int number) {
+		String nr = number + "";
+		int result = 0;
+		for(String x : nr.split("")){
+			if(Integer.parseInt(x) != 0) {
+				int y = number / Integer.parseInt(x);
+				if((y * Integer.parseInt(x)) == number) result++;  
+			}	
+		}
+		return result;
+	}
+}
